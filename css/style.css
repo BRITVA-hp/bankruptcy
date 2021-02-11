@@ -453,17 +453,39 @@ body {
       font-size: 18px; }
     .menu__tel {
       font-size: 18px; }
-  .main__title {
-    font-size: 36px;
-    line-height: 46px;
-    max-width: 480px; }
-  .main__text {
-    font-size: 16px;
-    line-height: 19px; }
-  .main__subtitle {
-    font-size: 16px;
-    line-height: 19px;
-    padding: 7px 0 7px 15px; } }
+  .main {
+    padding-top: 70px;
+    position: relative; }
+    .main__container {
+      position: relative;
+      z-index: 2; }
+    .main::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1; }
+    .main__title {
+      font-size: 36px;
+      line-height: 46px;
+      max-width: 480px;
+      text-align: center;
+      margin: auto; }
+    .main__text {
+      font-size: 16px;
+      line-height: 19px; }
+    .main__subtitle {
+      font-size: 16px;
+      line-height: 19px;
+      padding: 7px 0 7px 15px; }
+    .main__box {
+      justify-content: center; }
+    .main__button {
+      display: block;
+      margin: auto; } }
 
 @media screen and (max-width: 767px) {
   .menu {
@@ -479,22 +501,29 @@ body {
   .main {
     padding: 40px 10px;
     background: none; }
+    .main::before {
+      display: none; }
     .main__title {
-      margin: auto;
       margin-bottom: 30px;
-      text-align: center;
       font-size: 24px;
       line-height: 31px; }
     .main__text {
       font-size: 14px;
       line-height: 17px;
-      max-width: 220px; }
+      max-width: 220px;
+      padding-left: 0;
+      align-self: flex-end;
+      margin-bottom: 20px; }
     .main__wrap {
-      width: 100%; }
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 0; }
     .main__subtitle {
       margin: auto;
       padding-left: 0;
       background-position: center;
+      background-image: url(../img/main/Rectangle-mobile.png);
       text-align: center;
       width: 100%;
       font-size: 14px;
@@ -504,10 +533,21 @@ body {
         display: block;
         margin: auto; }
     .main__button {
-      display: block;
-      margin: auto; }
+      margin-top: -4px; }
     .main__img {
       width: 80px;
-      position: absolute; }
+      position: absolute;
+      left: 0;
+      top: 0; }
+      .main__img-mobile {
+        display: block;
+        margin: auto; }
     .main__box {
-      justify-content: center; } }
+      max-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0; } }
+
+@media screen and (max-width: 575px) {
+  .main__title {
+    max-width: 320px; } }
