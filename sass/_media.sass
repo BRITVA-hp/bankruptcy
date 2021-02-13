@@ -47,6 +47,9 @@
         &__title
             font-size: 39px
             line-height: 50px
+        &__subtitle
+            font-size: 30px
+            line-height: 36px
     .debt
         &__card
             &-text
@@ -55,6 +58,13 @@
 
 
 @media screen and (max-width: 992px)
+    .quiz
+        &__text
+            font-size: 20px
+            line-height: 24px
+        &__subtitle
+            &::after
+                width: 190px
     .trust
         padding-top: 60px
         &__box
@@ -248,6 +258,18 @@
             margin-bottom: 30px
 
 @media screen and (max-width: 575px)
+    .quiz
+        &__title
+            margin-bottom: 13px
+        &__subtitle
+            margin-bottom: 50px
+            &::after
+                width: 100px
+                bottom: -25px
+        &__text
+            font-size: 16px
+            line-height: 19px
+            color: $dark
     .main
         &__title
             max-width: 320px
@@ -285,6 +307,9 @@
         &__title
             font-size: 30px
             line-height: 38px
+        &__subtitle
+            font-size: 24px
+            line-height: 29px
     .debt
         padding-top: 35px
         padding-bottom: 75px
@@ -309,3 +334,8 @@
         &__text
             font-size: 20px
             line-height: 24px
+
+@media screen and (max-width: 420px)
+    .quiz
+        &__text
+            max-width: 270px

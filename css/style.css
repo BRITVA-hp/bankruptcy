@@ -344,6 +344,33 @@ body {
     font-size: 48px;
     line-height: 61px;
     color: #261E3B; }
+  .section__subtitle {
+    font-family: 'Gilroy-Medium';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 44px;
+    color: #261E3B; }
+
+.button {
+  font-family: 'Gilroy-Bold';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  background: linear-gradient(0deg, #653CBC 0%, #8A5EEA 100%);
+  box-shadow: 0px 18px 40px -20px #502BA0;
+  border-radius: 16px;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s; }
+  .button:focus {
+    outline: none; }
+  .button:hover {
+    background: linear-gradient(0deg, #653CBC 0%, #2e0c77 100%); }
 
 .container {
   max-width: 1450px;
@@ -584,6 +611,67 @@ body {
     .debt__card-text--bold {
       font-family: 'Gilroy-Bold'; }
 
+.quiz {
+  background-color: #FFFFFF;
+  padding-top: 80px;
+  padding-bottom: 80px; }
+  .quiz__title, .quiz .quiz__subtitle {
+    text-align: center; }
+  .quiz__subtitle {
+    position: relative;
+    margin-bottom: 80px; }
+    .quiz__subtitle::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 275px;
+      height: 1px;
+      background-color: #653CBC; }
+  .quiz__text {
+    font-family: 'Gilroy-Regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #653CBC;
+    max-width: 1050px;
+    margin: auto;
+    margin-bottom: 95px; }
+  .quiz__img {
+    position: relative; }
+  .quiz__dots {
+    position: absolute;
+    top: 23%;
+    left: -43px; }
+  .quiz__box-title {
+    font-family: 'Gilroy-Bold';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #261E3B;
+    max-width: 615px;
+    margin-bottom: 40px; }
+  .quiz__ul {
+    max-width: 660px;
+    font-family: 'Gilroy-Regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    color: #261E3B;
+    list-style-type: none;
+    list-style-image: url(../img/quiz/Ellipse.png);
+    padding-left: 30px;
+    margin-bottom: 60px; }
+  .quiz__li {
+    margin-bottom: 30px; }
+    .quiz__li:last-of-type {
+      margin-bottom: 0 !important; }
+
 @media screen and (max-width: 1600px) {
   .debt__money--1 {
     width: 190px;
@@ -626,10 +714,18 @@ body {
   .section__title {
     font-size: 39px;
     line-height: 50px; }
+  .section__subtitle {
+    font-size: 30px;
+    line-height: 36px; }
   .debt__card-text {
     max-width: 235px; } }
 
 @media screen and (max-width: 992px) {
+  .quiz__text {
+    font-size: 20px;
+    line-height: 24px; }
+  .quiz__subtitle::after {
+    width: 190px; }
   .trust {
     padding-top: 60px; }
     .trust__box {
@@ -817,6 +913,17 @@ body {
       margin-bottom: 30px; } }
 
 @media screen and (max-width: 575px) {
+  .quiz__title {
+    margin-bottom: 13px; }
+  .quiz__subtitle {
+    margin-bottom: 50px; }
+    .quiz__subtitle::after {
+      width: 100px;
+      bottom: -25px; }
+  .quiz__text {
+    font-size: 16px;
+    line-height: 19px;
+    color: #261E3B; }
   .main__title {
     max-width: 320px; }
   .trust {
@@ -849,6 +956,9 @@ body {
   .section__title {
     font-size: 30px;
     line-height: 38px; }
+  .section__subtitle {
+    font-size: 24px;
+    line-height: 29px; }
   .debt {
     padding-top: 35px;
     padding-bottom: 75px; }
@@ -871,3 +981,7 @@ body {
     .debt__text {
       font-size: 20px;
       line-height: 24px; } }
+
+@media screen and (max-width: 420px) {
+  .quiz__text {
+    max-width: 270px; } }
